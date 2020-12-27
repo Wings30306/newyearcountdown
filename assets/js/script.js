@@ -14,4 +14,19 @@ setInterval(function () {
     document.getElementById("hours").innerHTML = hours;
     document.getElementById("minutes").innerHTML = minutes;
     document.getElementById("seconds").innerHTML = seconds;
+  
+
+    if (months == 0) {
+        document.getElementById("months").parentElement.classList.add("d-none");
+        if (days == 0) {
+            document.getElementById("days").parentElement.classList.add("d-none")
+            if (hours == 0) {
+                document.getElementById("hours").parentElement.classList.add("d-none")
+                if (minutes == 0) {
+                    document.getElementById("minutes").parentElement.classList.add("d-none")
+                }
+            }
+        }
+    }
+
 }, 1000)
