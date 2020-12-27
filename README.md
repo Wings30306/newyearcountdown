@@ -7,6 +7,7 @@ A year-round countdown to count the number of months, days, hours, minutes and s
 - HTML to display the page
 - CSS to add styling to it
 - JavaScript to do the calculation and hide elements or change classes as needed. [More details 👇](#how-does-it-work)
+- Bootstrap for responsiveness
 
 ## How does it work?
 
