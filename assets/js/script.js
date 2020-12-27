@@ -1,4 +1,3 @@
-
 setInterval(function () {
     const now = new Date();
     const newYearStart = new Date(now.getFullYear() + 1, 0, 01);
@@ -14,7 +13,7 @@ setInterval(function () {
     document.getElementById("hours").innerHTML = hours;
     document.getElementById("minutes").innerHTML = minutes;
     document.getElementById("seconds").innerHTML = seconds;
-  
+
 
     if (months == 0) {
         document.getElementById("months").parentElement.classList.add("d-none");
