@@ -18,6 +18,9 @@ setInterval(function () {
 
     if (months == 0) {
         document.getElementById("months").parentElement.classList.add("d-none");
+        Array.from(document.getElementsByClassName("padding-for-five-cols")).forEach(element => {
+            element.classList.add("d-none")
+        });
         if (days == 0) {
             document.getElementById("days").parentElement.classList.add("d-none")
             if (hours == 0) {
