@@ -1,7 +1,3 @@
-const now = new Date();
-
-document.getElementById("nextyear").innerHTML = now.getFullYear() + 1
-
 setInterval(function () {
     const now = new Date();
     const newYearStart = new Date(now.getFullYear() + 1, 0, 01);
@@ -12,6 +8,7 @@ setInterval(function () {
     const minutes = Math.floor(secondsUntilNewYear % (60*60) / (60))
     const seconds = Math.floor(secondsUntilNewYear % 60)
 
+    document.getElementById("nextyear").innerHTML = now.getFullYear() + 1
     document.getElementById("weeks").innerHTML = weeks;
     document.getElementById("days").innerHTML = days;
     document.getElementById("hours").innerHTML = hours;
