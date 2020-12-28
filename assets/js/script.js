@@ -1,12 +1,16 @@
+const now = new Date();
+
+document.getElementById("nextyear").innerHTML = now.getFullYear() + 1
+
 setInterval(function () {
     const now = new Date();
     const newYearStart = new Date(now.getFullYear() + 1, 0, 01);
-    const timeUntilNewYear = new Date(newYearStart - now);
-    const weeks = timeUntilNewYear.getMonth()
-    const days = timeUntilNewYear.getDate() - 1
-    const hours = timeUntilNewYear.getHours() - 1
-    const minutes = timeUntilNewYear.getMinutes()
-    const seconds = timeUntilNewYear.getSeconds()
+    const secondsUntilNewYear = Math.floor((newYearStart - now)/1000);
+    const weeks = Math.floor(secondsUntilNewYear/(7*24*60*60))
+    const days = Math.floor(secondsUntilNewYear % (7*24*60*60) / (24*60*60))
+    const hours = Math.floor(secondsUntilNewYear % (24*60*60) / (60*60))
+    const minutes = Math.floor(secondsUntilNewYear % (60*60) / (60))
+    const seconds = Math.floor(secondsUntilNewYear % 60)
 
     document.getElementById("weeks").innerHTML = weeks;
     document.getElementById("days").innerHTML = days;
